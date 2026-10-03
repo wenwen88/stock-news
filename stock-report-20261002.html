@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美股·台股三面向日報 — 2026-10-02</title>
+<style>
+:root{
+  --bg:#0e1526;--panel:#16213a;--panel2:#1d2a48;--line:#2a3a5c;
+  --txt:#e8eefb;--dim:#93a4c7;--up:#37d67a;--down:#ff5c6c;--accent:#4f8cff;
+  --warn:#ffb454;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  line-height:1.7;padding:24px}
+.wrap{max-width:1080px;margin:0 auto}
+h1{font-size:1.7rem;margin:.2rem 0}
+h2{font-size:1.25rem;margin:0 0 .6rem;padding-left:.6rem;border-left:4px solid var(--accent)}
+h3{font-size:1.05rem;color:var(--dim);margin:1rem 0 .4rem}
+.meta{color:var(--dim);font-size:.82rem;margin-bottom:1.2rem}
+.grid{display:grid;gap:16px}
+.cols-2{grid-template-columns:1fr 1fr}
+.cols-4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+.tile .num{font-size:1.6rem;font-weight:700}
+.tile .lbl{color:var(--dim);font-size:.8rem}
+.tile .chg{font-size:.85rem;font-weight:600}
+.up{color:var(--up)}.down{color:var(--down)}.flat{color:var(--warn)}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}
+th{color:var(--dim);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.03em}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+tr:hover td{background:var(--panel2)}
+.tag{display:inline-block;padding:2px 8px;border-radius:6px;font-size:.72rem;background:var(--panel2);color:var(--accent);border:1px solid var(--line)}
+.gauge-wrap{display:flex;flex-direction:column;align-items:center}
+.note{background:rgba(79,140,255,.08);border:1px solid rgba(79,140,255,.3);border-radius:10px;padding:12px 14px;font-size:.86rem;color:var(--dim);margin-top:14px}
+.src{font-size:.72rem;color:var(--dim);margin-top:8px}
+.badge{font-size:.7rem;padding:2px 7px;border-radius:5px;background:#243456;color:#c9d6f5}
+section{margin-bottom:28px}
+svg{width:100%;height:auto;display:block}
+.legend{display:flex;gap:16px;font-size:.75rem;color:var(--dim);flex-wrap:wrap;margin-top:6px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;vertical-align:middle}
+@media(max-width:720px){
+  .cols-2,.cols-4{grid-template-columns:1fr}
+  body{padding:14px}
+  h1{font-size:1.35rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>美股 · 台股 三面向日報</h1>
+  <div class="meta">
+    基準日 <b>2026-10-02</b>（台股收盤）· 美股收盤 2026-10-01（台 10/2）· 財金新聞截至 2026-10-03。<br>
+    <span class="badge">Delayed data</span> 本報告數據為公開快照/收盤值，非即時報價；VIX、法人籌碼等為盤後統計，僅供參考。
+  </div>
+</header>
+
+<!-- 速覽儀表板 -->
+<section>
+  <h2>一、速覽儀表板（最近交易日）</h2>
+  <div class="grid cols-4">
+    <div class="card tile"><div class="lbl">S&P 500</div><div class="num">7,652.71</div><div class="chg down">−0.23%</div></div>
+    <div class="card tile"><div class="lbl">Nasdaq 綜合</div><div class="num">26,864.00</div><div class="chg up">+0.25%</div></div>
+    <div class="card tile"><div class="lbl">Dow 工業</div><div class="num">50,918.08</div><div class="chg down">−0.84%</div></div>
+    <div class="card tile"><div class="lbl">費城半導體 SOX</div><div class="num">+1.59%</div><div class="chg up">普漲</div></div>
+    <div class="card tile"><div class="lbl">台股加權指數</div><div class="num">48,475.74</div><div class="chg up">+122.25（收盤新高）</div></div>
+    <div class="card tile"><div class="lbl">10Y 美債殖利率</div><div class="num">~5.24%</div><div class="chg down">2002 以來高檔</div></div>
+    <div class="card tile"><div class="lbl">VIX 恐慌指數</div><div class="num">19–20</div><div class="chg flat">低於平均</div></div>
+    <div class="card tile"><div class="lbl">CNN 恐懼貪婪</div><div class="num">31 / 100</div><div class="chg down">Fear（前收 28）</div></div>
+  </div>
+  <div class="note">
+    關鍵主軸：<b>9 月非農僅新增 2.9 萬（遠低於預期、較 8 月 13.3 萬明顯降速）</b>，冷卻了 Fed 升息預期，
+    帶動美債殖利率回落、美股靠近歷史高點；同時<b>費半普漲 +1.59%、台積電 ADR +2.96%</b>，
+    台股本日續創收盤新高。風險側：<b>10Y 美債已衝上 5.2–5.3% 區間（2002 以來新高）</b>，
+    長期利率升壓仍是多頭最大逆風。
+  </div>
+</section>
+
+<!-- 第二面向：宏觀 -->
+<section>
+  <h2>二、宏觀面</h2>
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>美股四大指數 · 近兩日收盤對比</h3>
+      <table>
+        <tr><th>指數</th><th class="num">10/1 收盤</th><th class="num">漲跌%</th></tr>
+        <tr><td>S&amp;P 500</td><td class="num">7,652.71</td><td class="num down">−0.23</td></tr>
+        <tr><td>Nasdaq 綜合</td><td class="num">26,864.00</td><td class="num up">+0.25</td></tr>
+        <tr><td>Dow 工業</td><td class="num">50,918.08</td><td class="num down">−0.84</td></tr>
+        <tr><td>費城半導體 SOX</td><td class="num">—</td><td class="num up">+1.59</td></tr>
+      </table>
+      <div class="legend"><span><span class="dot" style="background:var(--up)"></span>收漲</span><span><span class="dot" style="background:var(--down)"></span>收跌</span></div>
+      <div class="src">來源：MarketWatch / BNN Bloomberg（收盤快照）</div>
+    </div>
+
+    <div class="card">
+      <h3>10Y 美債殖利率趨勢</h3>
+      <svg viewBox="0 0 300 150" role="img" aria-label="10Y 美債殖利率三點折線">
+        <line x1="30" y1="130" x2="280" y2="130" stroke="#2a3a5c"/>
+        <!-- 軸 -->
+        <text x="34" y="145" fill="#93a4c7" font-size="9">9/23</text>
+        <text x="140" y="145" fill="#93a4c7" font-size="9">10/1</text>
+        <text x="245" y="145" fill="#93a4c7" font-size="9">10/02</text>
+        <!-- 折線 5.106 -> 5.33 -> 5.24 （縮放 y: 5.0=>120, 5.4=>40） -->
+        <polyline points="50,70 160,40 260,60" fill="none" stroke="#4f8cff" stroke-width="2.5"/>
+        <circle cx="50" cy="70" r="4" fill="#4f8cff"/><text x="52" y="64" fill="#e8eefb" font-size="9">5.11</text>
+        <circle cx="160" cy="40" r="4" fill="#ff5c6c"/><text x="163" y="36" fill="#ff5c6c" font-size="9">5.33</text>
+        <circle cx="260" cy="60" r="4" fill="#37d67a"/><text x="250" y="54" fill="#37d67a" font-size="9">5.24</text>
+      </svg>
+      <div class="src">9/23 衝 5.106%（2007 以來高）；10/1 見 5.33%（2002 以來高）；近期回落 5.24%。長端利率升壓為多頭最大逆風。</div>
+    </div>
+
+    <div class="card">
+      <h3>CNN 恐懼貪婪指數</h3>
+      <div class="gauge-wrap">
+      <svg viewBox="0 0 200 120" role="img" aria-label="恐懼貪願儀表 31/100">
+        <path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="#2a3a5c" stroke-width="14"/>
+        <!-- 0..31 紅色弧 -->
+        <path d="M20 100 A80 80 0 0 1 55 33" fill="none" stroke="#ff5c6c" stroke-width="14" stroke-linecap="round"/>
+        <line x1="100" y1="100" x2="62" y2="58" stroke="#e8eefb" stroke-width="3"/>
+        <circle cx="100" cy="100" r="6" fill="#e8eefb"/>
+        <text x="100" y="86" fill="#ff5c6c" font-size="22" font-weight="700" text-anchor="middle">31</text>
+        <text x="18" y="115" fill="#93a4c7" font-size="9">Fear</text>
+        <text x="164" y="115" fill="#93a4c7" font-size="9">Greed</text>
+      </svg>
+      <div class="src">前收 28 · 一週前 37 · 一月前 46（轉 Fear，情緒轉冷）。來源：CNN / GuruTrack / MacroMicro</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>FED 動向 &amp; 經濟數據</h3>
+      <table>
+        <tr><td>9 月非農</td><td class="num">+29,000（降速、低於預期）</td></tr>
+        <tr><td>8 月非農</td><td class="num">+133,000</td></tr>
+        <tr><td>市場定價</td><td class="num">10 月升息機率約 66%（9/23）</td></tr>
+        <tr><td>通膨</td><td class="num">偏軟，冷卻升息預期</td></tr>
+      </table>
+      <div class="src">就業降速 + 通膨偏軟 → 利率壓力短暫緩解；惟 10Y 長端仍受財赤與需求推升。</div>
+    </div>
+  </div>
+  <div class="note">
+    <b>美股對台股的傳導</b>：台積電 ADR 跑贏費半（+2.96% vs +1.59%），代表外資主動加碼<b>先進製程</b>，
+    紅利集中在 CoWoS 先進封裝鏈、高階散熱與電源管理模組；台股本日加權續創 48,475 收盤新高、台指期逼近 5 萬，
+    連動訊號正向。但長端利率 5.2%+ 對成長型高估值股構成估值折現壓力，AI 主軸若退燒，高位階族群回檔壓力最大。
+  </div>
+</section>
+
+<!-- 第三面向：台股產業 -->
+<section>
+  <h2>三、台股與產業層級</h2>
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>法人籌碼（2026-10-02）</h3>
+      <table>
+        <tr><th>法人</th><th class="num">方向</th><th class="num">金額</th></tr>
+        <tr><td>投資信託</td><td class="num up">買超</td><td class="num up">+57.7 億</td></tr>
+        <tr><td>外資（台指期貨）</td><td class="num down">調節</td><td class="num">多 −480 / 空 +270 口</td></tr>
+        <tr><td>自營商</td><td class="num flat">依 TWSE 統計</td><td class="num">—</td></tr>
+      </table>
+      <div class="src">台指期貨外資持倉成本 46,035 點（收 48,671），內資偏多、外資期貨部位調節。
+      外資現貨買賣超金額以 TWSE 115 年 10/02 統計表為最終依據。来源：TWSE / 股市爆料同學會 / goodinfo</div>
+    </div>
+    <div class="card">
+      <h3>產業趨勢重點</h3>
+      <p style="font-size:.9rem">
+      ① <b>AI 成熟製程 / 被動元件（MLCC）</b>：經三個月籌碼洗盤後 10 月迎「扣三低」轉折，
+      銅鎳銀漲價 → 龍頭調價紅利 + 村田轉單 + AI 伺服器高容值需求，低基期族群補漲主線。<br>
+      ② <b>矽晶圓</b>：AI 成熟製程帶動環球晶、中美晶攻漲停，產能利用率回升。<br>
+      ③ <b>記憶體</b>：東芝宣布擴產 HDD，美股威騰／希捷崩 10%、美光跌 2%；
+      但 HDD 與 AI 核心的 HBM/DRAM 不同供應鏈，對台廠（南亞科、華邦電）實質影響有限。<br>
+      ④ <b>先進封裝 CoWoS</b>：台積電 ADR 強勢，封測與散熱供應鏈能見度上修。
+      </p>
+    </div>
+  </div>
+  <div class="note">
+    <b>大盤未來走向</b>：加權已站上 48K 高檔，台指期逼近 5 萬，短期動能由「低位階補漲 + AI 主軸」支撐。
+    風險三大變數：(1) 10Y 長端利率是否維持 5%+；(2) 選舉行情 / 財報季能否延續；(3) 記憶體鬼故事是否擴散。
+    量能若持續 > 9,000 億，多頭可維持；若縮量回落，留意高位階族群先行回檔。
+  </div>
+</section>
+
+<!-- 第四面向：個股 -->
+<section>
+  <h2>四、個股解析 &amp; 潛力股</h2>
+  <div class="card" style="margin-bottom:16px">
+    <h3>選股推薦原則（本報告依此篩選）</h3>
+    <table>
+      <tr><td>① 外資連買 3 日以上</td><td>⑤ 均線多頭排列（5&gt;10&gt;20）</td></tr>
+      <tr><td>② 成交量 &gt; 20 日均量 ×1.5</td><td>⑥ 明確題材／族群定位</td></tr>
+      <tr><td>③ 收盤價站上 20 日均線</td><td>⑦ 量價齊升、扣低轉折點確認</td></tr>
+      <tr><td>④ 族群資金輪動主力方向</td><td>—</td></tr>
+    </table>
+  </div>
+
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>被動元件四大 · 漲幅%</h3>
+      <svg viewBox="0 0 300 150" role="img" aria-label="四大股漲幅橫條圖">
+        <text x="6" y="16" fill="#e8eefb" font-size="10">華新科 2492</text>
+        <rect x="120" y="4" width="150" height="14" rx="4" fill="#37d67a"/><text x="274" y="15" fill="#37d67a" font-size="10">9.88</text>
+        <text x="6" y="46" fill="#e8eefb" font-size="10">環球晶 6488</text>
+        <rect x="120" y="34" width="145" height="14" rx="4" fill="#37d67a"/><text x="269" y="45" fill="#37d67a" font-size="10">9.68</text>
+        <text x="6" y="76" fill="#e8eefb" font-size="10">中美晶 5483</text>
+        <rect x="120" y="64" width="74" height="14" rx="4" fill="#4f8cff"/><text x="198" y="75" fill="#4f8cff" font-size="10">4.73</text>
+        <text x="6" y="106" fill="#e8eefb" font-size="10">國巨 2327</text>
+        <rect x="120" y="94" width="64" height="14" rx="4" fill="#4f8cff"/><text x="188" y="105" fill="#4f8cff" font-size="10">3.99</text>
+      </svg>
+      <div class="src">華新科連續第 2 日漲停；環球晶攻漲停。量價齊升，扣三低轉折啟動。</div>
+    </div>
+
+    <div class="card">
+      <h3>推薦潛力股（依上述原則）</h3>
+      <table>
+        <tr><th>代號</th><th>名稱</th><th>族群</th><th class="num">收盤</th><th class="num">漲%</th><th>題材</th></tr>
+        <tr><td>2492</td><td>華新科</td><td>MLCC</td><td class="num">361.5</td><td class="num up">+9.88</td><td>村田轉單＋扣三低轉折</td></tr>
+        <tr><td>6488</td><td>環球晶</td><td>矽晶圓</td><td class="num">1,190</td><td class="num up">+9.68</td><td>AI 成熟製程＋稼動率回升</td></tr>
+        <tr><td>2327</td><td>國巨</td><td>MLCC</td><td class="num">626</td><td class="num up">+3.99</td><td>龍頭完整布局＋漲價潮</td></tr>
+        <tr><td>5483</td><td>中美晶</td><td>矽晶圓</td><td class="num">221.5</td><td class="num up">+4.73</td><td>成熟製程補漲</td></tr>
+      </table>
+      <div class="src">摩爾投顧點名低位階補漲四檔；觀察黑馬：鈺邦、興勤（EPS 族群之冠）、鈞寶。</div>
+    </div>
+  </div>
+
+  <div class="note">
+    <b>風險提示</b>：① 記憶體族群受東芝擴產鬼故事拖累，短線避開南亞科／華邦電追價；
+    ② 被動元件已連續攻漲停，追高風險高，宜等回測均線分批；③ 10Y 長端 5%+ 若上破，成長型高估值族群首当其衝。
+    <br>本報告非投資建議，請自行評估風險。
+  </div>
+</section>
+
+<footer style="margin-top:30px;padding-top:14px;border-top:1px solid var(--line);font-size:.72rem;color:var(--dim)">
+  資料來源：TWSE、BNN Bloomberg、MarketWatch、CNBC/CNN、鉅亨網、FTNN、中時、Yahoo 股市、goodinfo、股市爆料同學會、TradingKey。
+  所有數據為收盤/快照性質，可能存在延遲。圖表依公開數據手繪（SVG），非即時。
+  產生：Hermes · 2026-10-03。
+</footer>
+</div>
+</body>
+</html>
