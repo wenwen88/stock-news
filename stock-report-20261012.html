@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美股·台股三面向日報 — 2026-10-12</title>
+<style>
+:root{
+  --bg:#0e1526;--panel:#16213a;--panel2:#1d2a48;--line:#2a3a5c;
+  --txt:#e8eefb;--dim:#93a4c7;--up:#37d67a;--down:#ff5c6c;--accent:#4f8cff;
+  --warn:#ffb454;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  line-height:1.7;padding:24px}
+.wrap{max-width:1080px;margin:0 auto}
+h1{font-size:1.7rem;margin:.2rem 0}
+h2{font-size:1.25rem;margin:0 0 .6rem;padding-left:.6rem;border-left:4px solid var(--accent)}
+h3{font-size:1.05rem;color:var(--dim);margin:1rem 0 .4rem}
+.meta{color:var(--dim);font-size:.82rem;margin-bottom:1.2rem}
+.grid{display:grid;gap:16px}
+.cols-2{grid-template-columns:1fr 1fr}
+.cols-4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+.tile .num{font-size:1.6rem;font-weight:700}
+.tile .lbl{color:var(--dim);font-size:.8rem}
+.tile .chg{font-size:.85rem;font-weight:600}
+.up{color:var(--up)}.down{color:var(--down)}.flat{color:var(--warn)}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}
+th{color:var(--dim);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.03em}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+tr:hover td{background:var(--panel2)}
+.note{background:rgba(79,140,255,.08);border:1px solid rgba(79,140,255,.3);border-radius:10px;padding:12px 14px;font-size:.86rem;color:var(--dim);margin-top:14px}
+.src{font-size:.72rem;color:var(--dim);margin-top:8px}
+.badge{font-size:.7rem;padding:2px 7px;border-radius:5px;background:#243456;color:#c9d6f5}
+section{margin-bottom:28px}
+svg{width:100%;height:auto;display:block}
+.legend{display:flex;gap:16px;font-size:.75rem;color:var(--dim);flex-wrap:wrap;margin-top:6px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;vertical-align:middle}
+@media(max-width:720px){
+  .cols-2,.cols-4{grid-template-columns:1fr}
+  body{padding:14px}
+  h1{font-size:1.35rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>美股 · 台股 三面向日報</h1>
+  <div class="meta">
+    基準日 <b>2026-10-12</b>（週一，台股收盤 CST）· 美股收盤 <b>10-09</b>（美東週五）＋ 10-12 盤中（美東週一，delayed）· 財金新聞截至 2026-10-13。<br>
+    <span class="badge">Delayed data</span> 所有行情為收盤/快照/盤中延遲值，非即時報價；法人籌碼、VIX、PCR 為盤後統計，僅供參考。
+  </div>
+</header>
+
+<!-- ① 速覽儀表板 -->
+<section>
+  <h2>一、速覽儀表板</h2>
+  <div class="grid cols-4">
+    <div class="card tile"><div class="lbl">S&amp;P 500（10/09）</div><div class="num">7,811.54</div><div class="chg up">+0.59%</div></div>
+    <div class="card tile"><div class="lbl">Nasdaq 綜合（10/09）</div><div class="num">27,366.17</div><div class="chg up">+0.64%</div></div>
+    <div class="card tile"><div class="lbl">Dow 工業（10/09）</div><div class="num">51,654.95</div><div class="chg up">+0.83%</div></div>
+    <div class="card tile"><div class="lbl">費城半導體（10/09）</div><div class="num">−0.41%</div><div class="chg down">ARM/Intel 領跌</div></div>
+    <div class="card tile"><div class="lbl">台股加權指數（10/12）</div><div class="num">49,302.00</div><div class="chg down">−11（−0.02%）</div></div>
+    <div class="card tile"><div class="lbl">10Y 美債殖利率</div><div class="num">~5.2%</div><div class="chg flat">2002 以來高檔區</div></div>
+    <div class="card tile"><div class="lbl">台灣 VIX（10/12）</div><div class="num">25.15</div><div class="chg flat">近一年 31 百分位</div></div>
+    <div class="card tile"><div class="lbl">CNN 恐懼貪婪（10/12）</div><div class="num">45 / 100</div><div class="chg flat">Fear/Neutral 交界</div></div>
+  </div>
+  <div class="note">
+    <b>關鍵主軸</b>：台股本日微跌 11 點收 49,302，連 4 天縮量至 8,170 億；
+    <b>外資現貨仍賣超 522 億但賣壓收斂</b>，外資大台空單首度轉減 388 口、PCR 回升 4.60%，量化訊號回歸「中性（+0.5）」。
+    美股 10/09 三大指數收漲（道指 +0.83%）、費半回檔 −0.41%；本週 <b>大型銀行財報季開跑</b>、
+    <b>台積電 10/15 法說</b>成下週最大焦點。風險側：10Y 美債維持 5.2% 區間、記憶體股（海力士/閃迪/美光）持續走弱。
+  </div>
+</section>
+
+<!-- ② 宏觀面 -->
+<section>
+  <h2>二、宏觀面</h2>
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>美股三大指數 · 10/09（週五）收盤</h3>
+      <table>
+        <tr><th>指數</th><th class="num">收盤</th><th class="num">漲跌%</th></tr>
+        <tr><td>道瓊工業</td><td class="num">51,654.95</td><td class="num up">+0.83</td></tr>
+        <tr><td>S&amp;P 500</td><td class="num">7,811.54</td><td class="num up">+0.59</td></tr>
+        <tr><td>Nasdaq 綜合</td><td class="num">27,366.17</td><td class="num up">+0.64</td></tr>
+        <tr><td>費城半導體</td><td class="num">—</td><td class="num down">−0.41</td></tr>
+      </table>
+      <div class="note" style="margin-top:10px">週線：S&amp;P +1.15% &gt; 道指 +0.93% &gt; 那斯 +0.64%。
+      10/12 盤中（delayed）：S&amp;P +0.04%、道指 +0.17%、那斯 −0.06%；記憶體股海力士/閃迪跌逾 3%、美光跌逾 2%，光通信 Lumentum 走弱。</div>
+      <div class="src">來源：金十數據 / BigGo / Gate US（10/09 收盤快照）；同花順財訊（10/12 盤中）</div>
+    </div>
+
+    <div class="card">
+      <h3>10Y 美債殖利率 · 近期走勢</h3>
+      <svg viewBox="0 0 300 150" role="img" aria-label="10Y 美債殖利率折線 9/23 至 10 月中">
+        <line x1="30" y1="130" x2="280" y2="130" stroke="#2a3a5c"/>
+        <text x="34" y="145" fill="#93a4c7" font-size="9">9/23</text>
+        <text x="118" y="145" fill="#93a4c7" font-size="9">10/01</text>
+        <text x="198" y="145" fill="#93a4c7" font-size="9">10/02</text>
+        <text x="255" y="145" fill="#93a4c7" font-size="9">10月中</text>
+        <polyline points="50,60 140,30 210,45 260,52" fill="none" stroke="#4f8cff" stroke-width="2.5"/>
+        <circle cx="50" cy="60" r="4" fill="#4f8cff"/><text x="54" y="54" fill="#e8eefb" font-size="9">5.11</text>
+        <circle cx="140" cy="30" r="4" fill="#ff5c6c"/><text x="144" y="26" fill="#ff5c6c" font-size="9">5.33</text>
+        <circle cx="210" cy="45" r="4" fill="#37d67a"/><text x="214" y="41" fill="#37d67a" font-size="9">5.24</text>
+        <circle cx="260" cy="52" r="4" fill="#ffb454"/><text x="245" y="48" fill="#ffb454" font-size="9">~5.2</text>
+      </svg>
+      <div class="src">9/23 衝 5.11%（2007 以來高）→ 10/01 見 5.33%（2002 以來高）→ 小幅回落仍守 5.2% 高檔區。長端利率升壓仍是成長型高估值股最大逆風。</div>
+    </div>
+
+    <div class="card">
+      <h3>CNN 恐懼貪婪指數（10/12）</h3>
+      <div style="display:flex;flex-direction:column;align-items:center">
+      <svg viewBox="0 0 200 120" role="img" aria-label="恐懼貪願儀表 45/100">
+        <path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="#2a3a5c" stroke-width="14"/>
+        <path d="M20 100 A80 80 0 0 1 47 41" fill="none" stroke="#ff5c6c" stroke-width="14" stroke-linecap="round"/>
+        <line x1="100" y1="100" x2="70" y2="64" stroke="#e8eefb" stroke-width="3"/>
+        <circle cx="100" cy="100" r="6" fill="#e8eefb"/>
+        <text x="100" y="86" fill="#ffb454" font-size="22" font-weight="700" text-anchor="middle">45</text>
+        <text x="18" y="115" fill="#93a4c7" font-size="9">Fear</text>
+        <text x="164" y="115" fill="#93a4c7" font-size="9">Greed</text>
+      </svg>
+      <div class="src">CNN 官方 45（Fear/Neutral 交界；前收 45、一週前 39、一月前 38）。另一來源 Convex 給 69（Greed，provider 不同），兩者並列見下方。</div>
+      </div>
+      <table style="margin-top:10px">
+        <tr><th>來源</th><th class="num">10/12 讀數</th><th>區間</th></tr>
+        <tr><td>CNN Business</td><td class="num">45</td><td>Fear ↔ Neutral 交界</td></tr>
+        <tr><td>Convex（另 provider）</td><td class="num">69</td><td>Greed</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3>FED 動向 &amp; 經濟數據</h3>
+      <table>
+        <tr><td>財報季</td><td class="num">10/13 大銀開跑（JPM/高盛/花旗/富國）</td></tr>
+        <tr><td>S&amp;P 500 Q3 EPS 預期</td><td class="num">YoY +約 30%（LSEG）</td></tr>
+        <tr><td>地緣</td><td class="num">俄烏「能源停火」傳言、美伊僵局</td></tr>
+        <tr><td>油價</td><td class="num">布蘭特站上 $100</td></tr>
+        <tr><td>9 月非農</td><td class="num">+29,000（低於預期、降速）</td></tr>
+      </table>
+      <div class="src">就業降速 + 通膨偏軟 → 短期升息壓力緩解；但 10Y 長端仍受財政赤字與油價推升維持 5%+。</div>
+    </div>
+  </div>
+  <div class="note">
+    <b>美股對台股的傳導</b>：台積電 10/15 法說為台股下週核心事件，市場期待「Q3 營收季增 13~15%、毛利率 &gt;68%、
+    2026 美元營收成長上調至 40% 中段」；若指引偏強，AI 主軸與 CoWoS 供應鏈情緒續強。但 10Y 長端 5.2% 高檔 + 記憶體股回檔，
+    高位階成長股回檔壓力仍在；本週銀行財報若反映「高利率侵蝕交易/借貸」，可能短暫壓制風險偏好。
+  </div>
+</section>
+
+<!-- ③ 產業層級 -->
+<section>
+  <h2>三、台股與產業層級</h2>
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>法人籌碼（2026-10-12）</h3>
+      <table>
+        <tr><th>法人</th><th class="num">方向</th><th class="num">金額/口數</th></tr>
+        <tr><td>外資（現貨）</td><td class="num down">賣超</td><td class="num down">−521.98 億（收斂）</td></tr>
+        <tr><td>投資信託</td><td class="num up">買超</td><td class="num up">+71.24 億（連 2 日）</td></tr>
+        <tr><td>自營商</td><td class="num down">賣超</td><td class="num">−7.99 億（連 3 日）</td></tr>
+        <tr><td>外資大台</td><td class="num up">空單減</td><td class="num">−388 口（轉正向）</td></tr>
+        <tr><td>十大特定法人</td><td class="num up">偏多</td><td class="num">+1,495 口淨多</td></tr>
+      </table>
+      <div class="src">成交量 8,169.6 億（連 4 天縮量）；融資餘額 6,533 億（連 4 天增加）。来源：taixray 籌碼日報 / TWSE / 期交所</div>
+    </div>
+    <div class="card">
+      <h3>產業趨勢重點</h3>
+      <p style="font-size:.9rem">
+      ① <b>AI 伺服器 / 成熟製程</b>：台積電 Q3 營收 1.49 兆元創高，10/15 法說為下週最大催化；CoWoS 封測與散熱鏈能見度上修。<br>
+      ② <b>CPO / 光通訊</b>：大立光 CPO 三箭布局，外資目標價喊 1.1 萬元，10/12 攻漲停 7,325 元。<br>
+      ③ <b>記憶體（DRAM）</b>：南亞科月營收年增 +576%，Q2 EPS 14.97、毛利率 79.49%，台摩根/美高盛分點買超；但美股海力士/閃迪/美光回檔，短線避鬼故事。<br>
+      ④ <b>傳統 / 石化</b>：台塑四寶逆勢，惟台塑遭外資調節 3.6 萬張最多；CCL 三雄（台光電/台燿/聯茂）前波漲停後整理。
+      </p>
+    </div>
+  </div>
+  <div class="note">
+    <b>大盤未來走向</b>：加權 49,302 距歷史高點 49,823 僅約 1%，高檔窄幅震盪。多空均衡偏「中性（+0.5）」，
+    關鍵觀察：(1) 外資大台空單能否持續縮減；(2) PCR 84.78% 能否續升；(3) 台積電 10/15 法說指引。
+    風險三大變數：10Y 長端 5.2%+、記憶體鬼故事擴散、銀行財報高利率侵蝕。量能若維持 &gt;8,000 億，多頭可守；縮量回落則留意高位階族群先回檔。
+  </div>
+</section>
+
+<!-- ④ 個股 -->
+<section>
+  <h2>四、個股解析 &amp; 潛力股</h2>
+  <div class="card" style="margin-bottom:16px">
+    <h3>選股推薦原則（本報告依此篩選）</h3>
+    <table>
+      <tr><td>① 外資連買 ≥ 3 日</td><td>⑤ 均線多頭排列（5&gt;10&gt;20）</td></tr>
+      <tr><td>② 成交量 &gt; 20 日均量 ×1.5</td><td>⑥ 明確題材／族群定位</td></tr>
+      <tr><td>③ 收盤價站上 20 日均線</td><td>⑦ 量價齊升、扣三低轉折確認</td></tr>
+      <tr><td>④ 族群資金輪動主力方向</td><td>—</td></tr>
+    </table>
+  </div>
+
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>個股漲幅%（10/12，來源有記者數者）</h3>
+      <svg viewBox="0 0 300 150" role="img" aria-label="個股漲幅橫條圖">
+        <text x="6" y="20" fill="#e8eefb" font-size="10">大立光 3008</text>
+        <rect x="110" y="8" width="150" height="14" rx="4" fill="#37d67a"/>
+        <text x="264" y="19" fill="#37d67a" font-size="10">漲停 +9.88</text>
+        <text x="6" y="52" fill="#93a4c7" font-size="10">南亞科 2373</text>
+        <rect x="110" y="40" width="34" height="14" rx="4" fill="#4f8cff"/>
+        <text x="148" y="51" fill="#4f8cff" font-size="10">收 525（＋）</text>
+        <text x="6" y="84" fill="#93a4c7" font-size="10">台積電 2330</text>
+        <text x="110" y="84" fill="#93a4c7" font-size="10">10/15 法說前，待盤後數據</text>
+        <text x="6" y="116" fill="#93a4c7" font-size="10">緯創 / 中鋼</text>
+        <text x="110" y="116" fill="#93a4c7" font-size="10">外資買超榜，待盤後數據</text>
+      </svg>
+      <div class="src">大立光受 CPO/FA/FAU 題材，外資目標價 1.1 萬。南亞科 525（goodreturns 快照）。其餘個股收盤數以盤後統計為準，不臆造。</div>
+    </div>
+
+    <div class="card">
+      <h3>推薦潛力股（依 7 原則）</h3>
+      <table>
+        <tr><th>代號</th><th>名稱</th><th>族群</th><th class="num">收盤</th><th class="num">漲%</th><th>題材</th></tr>
+        <tr><td>3008</td><td>大立光</td><td>CPO/光學</td><td class="num">7,325</td><td class="num up">漲停 +9.88</td><td>外資目標價 1.1 萬、FA/FAU 訂單</td></tr>
+        <tr><td>2373</td><td>南亞科</td><td>DRAM</td><td class="num">525</td><td class="num up">+1.46</td><td>月營收 YoY +576%、高盛/摩根買超</td></tr>
+        <tr><td>2330</td><td>台積電</td><td>AI 晶圓</td><td class="num">—</td><td class="num">待盤後</td><td>10/15 法說、2026 美元營收 +40%</td></tr>
+        <tr><td>3231</td><td>緯創</td><td>AI 伺服器</td><td class="num">—</td><td class="num">待盤後</td><td>外資買超前五大、AI 基礎建設</td></tr>
+      </table>
+      <div class="src">外資買超前五大（10/09 盤前）：南亞科、中石化、緯創、台塑、中鋼；賣超前五大：友達、鴻海、力積電、台新新光金、群創。</div>
+    </div>
+  </div>
+
+  <div class="note">
+    <b>風險提示</b>：① 記憶體族群受東芝 HDD 擴產鬼故事拖累，追價南亞科須防「漲多修正」；
+    ② 大立光已連續攻漲停，追高風險高，宜等回測 20 日均線分批；③ 台積電 10/15 法說前波動加劇，指引低於「季增 13~15% / 毛利率 &gt;68%」將利空 CoWoS 鏈；
+    ④ 外資現貨連 4 日賣超（累計 −1,623 億），空單未持續縮減前盤勢仍壓制。
+    <br>本報告非投資建議，請自行評估風險。
+  </div>
+</section>
+
+<footer style="margin-top:30px;padding-top:14px;border-top:1px solid var(--line);font-size:.72rem;color:var(--dim)">
+  資料來源：taixray 籌碼日報、TWSE/期交所 法人統計、金十數據、BigGo、Gate US、同花順財訊、聯合財經、Wistock、goodreturns、Convex/Fscore（恐懼貪願）。
+  所有數據為收盤/快照/盤中延遲性質，可能存在延遲；圖表依公開數據手繪（SVG），非即時。
+  產生：Hermes · 2026-10-13。
+</footer>
+</div>
+</body>
+</html>
