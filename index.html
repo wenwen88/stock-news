@@ -98,22 +98,19 @@ function render(items){
   document.getElementById("hero-link").href=BASE+items[0].file;
 }
 
-async function loadFromAPI(){
-  const res = await fetch("https://api.github.com/repos/wenwen88/stock-news/contents/",
-                          {headers:{"Accept":"application/vnd.github+json"}});
-  if(!res.ok) throw new Error("api "+res.status);
-  const arr = await res.json();
-  const files = arr.filter(f=>/^stock-report-\d{8}\.html$/.test(f.name));
-  if(!files.length) throw new Error("no reports");
-  return files.map(f=>{
-    const m=f.name.match(/stock-report-(\d{4})(\d{2})(\d{2})\.html/);
-    return {date:`${m[1]}-${m[2]}-${m[3]}`, file:f.name, sub:"三面向日報 · 收盤快照"};
-  });
+// 主來源：同源靜態 reports.json（由 GitHub Actions 每次 push 新報告時自動重建），
+// 不再依賴瀏覽器端未授權 GitHub API（免限流/免 403）。
+async function loadFromIndex(){
+  const res = await fetch(BASE + "reports.json", {cache:"no-store"});
+  if(!res.ok) throw new Error("index " + res.status);
+  const data = await res.json();
+  if(!data.reports || !data.reports.length) throw new Error("empty index");
+  return data.reports;
 }
 
 (async()=>{
-  try{ render(await loadFromAPI()); }
-  catch(e){ console.warn("API fallback:", e); render(FALLBACK); }
+  try{ render(await loadFromIndex()); }
+  catch(e){ console.warn("index fallback:", e); render(FALLBACK); }
 })();
 </script>
 </body>
