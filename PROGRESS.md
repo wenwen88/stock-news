@@ -14,5 +14,6 @@
 - [ ] 選定技術棧（Python? 版本?）並補 AGENTS.md 指令區
 
 ## 最近變更
+- 2026-10-13 建立「日報中心」首頁 `index.html`：GitHub API 自動收錄所有 `stock-report-*.html`、依日期排序、離線 fallback；GitHub Pages 部署於 https://wenwen88.github.io/stock-news/。
 - 2026-10-03 產出 2026-10-02 美股·台股三面向日報（`stock-report-20261002.html`），純 SVG 離線圖表，已 push。
 - 2026-10-02 專案初始化：git init、建立 AGENTS.md / PROGRESS.md、安裝 gh CLI。
